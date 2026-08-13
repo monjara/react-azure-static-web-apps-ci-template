@@ -5,5 +5,5 @@ export const Route = createFileRoute('/test')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/test"!</div>
+  return <div>Hello from static web apps!</div>
 }
