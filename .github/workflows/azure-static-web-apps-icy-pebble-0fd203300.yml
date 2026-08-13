@@ -23,10 +23,16 @@ jobs:
           submodules: true
           lfs: false
       - name: Install OIDC Client from Core Package
-        run: npm install @actions/core@1.6.0 @actions/http-client
+        run: |
+          mkdir -p /tmp/oidc
+          cd /tmp/oidc
+          npm init -y
+          npm install @actions/core@1.6.0 @actions/http-client
       - name: Get Id Token
         uses: actions/github-script@v6
         id: idtoken
+        env:
+          NODE_PATH: /tmp/oidc/node_modules
         with:
           script: |
             const coredemo = require('@actions/core')
