@@ -5,5 +5,5 @@ export const Route = createFileRoute('/test')({
 })
 
 function RouteComponent() {
-  return <div>wwwwwwwwwwwwwwwwww</div>
+  return <div>xxxxxxxxxxxxxxxxxxxxx</div>
 }
