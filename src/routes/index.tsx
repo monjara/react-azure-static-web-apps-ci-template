@@ -7,6 +7,7 @@ function Home() {
   const bool = import.meta.env.VITE_BOOL
   return (
     <div className="p-8">
+      preview
       {text}
       {bool && <div>Bool is true</div>}
     </div>
