@@ -55,8 +55,8 @@ jobs:
 
       - name: Build
         env:
-          VITE_BOOL: ${{ secrets.VITE_BOOL }}
-          VITE_TEXT: ${{ secrets.VITE_TEXT }}
+          VITE_BOOL: ${{ vars.VITE_BOOL }}
+          VITE_TEXT: ${{ vars.VITE_TEXT }}
         run: pnpm build
 
       # Azure Static Web Apps
