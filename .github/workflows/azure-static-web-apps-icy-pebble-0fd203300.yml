@@ -17,6 +17,7 @@ jobs:
     permissions:
       id-token: write
       contents: read
+    environment: develop
     steps:
       - uses: actions/checkout@v3
         with:
@@ -53,6 +54,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
+        env:
+          VITE_BOOL: ${{ secrets.VITE_BOOL }}
+          VITE_TEXT: ${{ secrets.VITE_TEXT }}
         run: pnpm build
 
       # Azure Static Web Apps
